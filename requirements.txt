@@ -1,0 +1,7 @@
+fastapi==0.95.0         # Ensure compatibility with the latest FastAPI features
+uvicorn[standard]==0.23.2  # For running the FastAPI app
+sqlalchemy==2.0.18      # For ORM and database interaction
+psycopg2-binary==2.9.6  # PostgreSQL database adapter (sudo apt-get install -y libpq-dev)
+python-dotenv==1.0.0    # Load environment variables from a .env file
+pydantic==1.10.12       # Data validation and settings management
+python-multipart==0.0.5 # File uploads

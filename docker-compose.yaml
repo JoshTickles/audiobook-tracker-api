@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  # web:
+  #   build:
+  #     context: .  # The directory containing the Dockerfile
+  #   volumes:
+  #     - ./src:/app
+  #     - ./src/.env:/app/.env
+  #   ports:
+  #     - "8000:80"
+  #   depends_on:
+  #     - db
+  #   environment:
+  #     DATABASE_URL: "postgresql://postgres:password@db:5432/audiobook_db"
+
+  db:
+    image: postgres:13
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: audiobook_db
+    volumes:
+      - pgdata-new:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+volumes:
+  pgdata-new:
